@@ -75,7 +75,7 @@ def make_pdf(data_bytes, out_path, fsize=8):
     doc.build(elems)
 
 # UI setup with styling
-st.set_page_config(page_title="PDF Tool_Rudra", layout="wide")
+st.set_page_config(page_title="PDFixx", layout="wide")
 
 st.markdown("""
 <div style="text-align: center; margin-bottom: 10px;">
@@ -226,6 +226,7 @@ elif option == "Split PDF":
                 st.success(f"Pages {from_page} to {to_page} extracted successfully!")
                 with open(out_path, "rb") as f:
                     st.download_button("Download Extracted PDF", f, file_name="extracted_pages.pdf")
+
 
 
 
